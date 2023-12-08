@@ -1,0 +1,22 @@
+
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{football.img.url}}" width="100" height="100">
+        </div>
+        <div class="col-md-6">
+            {{football.name}}<br>
+            <h6>{{football.desc}}</h6> <br>
+            Club: {{football.club}}<br>
+            Balon D'or: {{football.bdor}}<br>
+            <a class="btn btn-warning" href="{% url 'sportapp:update' football.id %}">update</a>
+            <a class="btn btn-danger" href="{% url 'sportapp:delete' football.id %}">delete</a>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
